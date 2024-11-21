@@ -62,10 +62,6 @@ class GetXCalculator extends StatelessWidget {
         padding: const EdgeInsets.only(top: 20.0),
         child: Column(
           children: [
-            // Result container
-            
-
-            // Button container inside the result container
             Container(
               padding: const EdgeInsets.all(12.0),
               child: Column(

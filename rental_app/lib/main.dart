@@ -115,7 +115,7 @@ class TravelPage extends StatelessWidget {
               ),
               const SizedBox(height: 24),
               HostSection(), 
-              MostViewedSection(),// Added HostSection to the scrolling layout
+              MostViewedSection(),
             ],
           ),
         ),
@@ -217,16 +217,15 @@ class HostSection extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12.0),
         image: const DecorationImage(
-          image: AssetImage('assets/1.jpg'), // Replace with your image path
+          image: AssetImage('assets/1.jpg'), 
           fit: BoxFit.cover,
         ),
       ),
       child: Stack(
         children: [
-          // Add a semi-transparent overlay for better contrast
           Container(
             decoration: BoxDecoration(
-              color: Colors.black.withOpacity(0.5), // Semi-transparent overlay
+              color: Colors.black.withOpacity(0.5), 
               borderRadius: BorderRadius.circular(12.0),
             ),
           ),
@@ -241,30 +240,30 @@ class HostSection extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white, // White text color
+                    color: Colors.white, 
                   ),
                 ),
                 const Text(
                   "as low as 1%",
                   style: TextStyle(
                     fontSize: 16,
-                    color: Colors.white, // White text color
+                    color: Colors.white, 
                   ),
                 ),
                 const SizedBox(height: 12),
                 ElevatedButton(
                   onPressed: () {
-                    // Action for Become a Host button
+                    // Action for Host button
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.red, // Red button background
+                    backgroundColor: Colors.red, 
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                   ),
                   child: const Text(
                     "Become a Host",
-                    style: TextStyle(color: Colors.white), // White text color
+                    style: TextStyle(color: Colors.white), 
                   ),
                 ),
               ],
@@ -341,7 +340,7 @@ class MostViewedSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Image
+          
           ClipRRect(
             borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(12),
@@ -359,7 +358,7 @@ class MostViewedSection extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Price and Star Rating
+                
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -385,7 +384,7 @@ class MostViewedSection extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 8),
-                // Description
+              
                 Text(
                   description,
                   style: const TextStyle(
@@ -394,7 +393,7 @@ class MostViewedSection extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 4),
-                // Details
+                
                 Text(
                   details,
                   style: const TextStyle(

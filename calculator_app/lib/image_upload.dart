@@ -21,7 +21,7 @@ class _ImageUploadPageState extends State<ImageUploadPage> {
 
       if (pickedFile != null) {
         setState(() {
-          _image = File(pickedFile.path); // Save file as File
+          _image = File(pickedFile.path); 
         });
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
@@ -100,7 +100,6 @@ class _ImageUploadPageState extends State<ImageUploadPage> {
       permission.request();
       return true;
     } else if (result == PermissionStatus.denied) {
-      // Handle "Don't Allow" case
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Permission denied permanently.')),
       );
@@ -223,7 +222,7 @@ class _ImageUploadPageState extends State<ImageUploadPage> {
                         ),
                         child: IconButton(
                         onPressed: () {
-                          // Handle saving the image
+                          
                           ScaffoldMessenger.of(context).showSnackBar(
                             const SnackBar(content: Text('Image saved successfully!')),
                           );
