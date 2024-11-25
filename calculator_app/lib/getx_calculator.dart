@@ -62,6 +62,10 @@ class GetXCalculator extends StatelessWidget {
         padding: const EdgeInsets.only(top: 20.0),
         child: Column(
           children: [
+            // Result container
+            
+
+            // Button container inside the result container
             Container(
               padding: const EdgeInsets.all(12.0),
               child: Column(
@@ -109,7 +113,7 @@ class GetXCalculator extends StatelessWidget {
                           style: const TextStyle(
                             fontSize: 36,
                             color: Colors.black,
-                            fontWeight: FontWeight.bold,
+                            
                           ),
                           overflow: TextOverflow.ellipsis,
                         ),
@@ -174,7 +178,7 @@ class GetXCalculator extends StatelessWidget {
           style: TextStyle(
             fontSize: 30,
             fontWeight: FontWeight.bold,
-            color: label == '=' ? Colors.white : Colors.black,
+            color: (label == '='||label == '+'||label == '-'||label == '×'||label == '÷') ? Colors.white : Colors.black,
           ),
         ),
       ),

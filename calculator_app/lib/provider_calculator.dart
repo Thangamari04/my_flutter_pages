@@ -60,10 +60,10 @@ class ProviderCalculator extends StatelessWidget {
         backgroundColor: Colors.white,
       ),
       body: Padding(
-        padding: const EdgeInsets.only(top: 20.0), 
+        padding: const EdgeInsets.only(top: 20.0), // Padding added to the top
         child: Column(
           children: [
-            
+            // Button container
             Container(
               
               padding: const EdgeInsets.all(12.0),
@@ -78,13 +78,13 @@ class ProviderCalculator extends StatelessWidget {
               ),
             ),
 
-  
+            // Result container
             Expanded(
               child:Padding(padding: const EdgeInsets.all(16.0),
               child: Consumer<CalculatorProvider>(
                 builder: (context, calculator, child) {
                   return Container(
-                    
+                    //color: Colors.white,
                     alignment: Alignment.bottomRight,
                     padding: const EdgeInsets.all(15.0),
                     decoration: BoxDecoration(
@@ -99,7 +99,7 @@ class ProviderCalculator extends StatelessWidget {
                           style: const TextStyle(
                             fontSize: 36,
                             color:Colors.black,
-                            fontWeight: FontWeight.bold,
+                            
                           ),
                           overflow: TextOverflow.ellipsis,
                         ),
@@ -165,7 +165,8 @@ class ProviderCalculator extends StatelessWidget {
           style: TextStyle(
             fontSize: 30,
             fontWeight: FontWeight.bold,
-            color: label == '=' ? Colors.white : Colors.black,
+            color: (label == '='||label == '+'||label == '-'||label == '×'||label == '÷') ? Colors.white : Colors.black,
+            
           ),
         ),
       ),
